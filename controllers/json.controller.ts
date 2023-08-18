@@ -45,7 +45,7 @@ const getJson = (req: Request, res: Response) => {
 
   const resultData = jsonData.filter((el) => {
     if (number) {
-      return el.email === email && el.number === number
+      return el.email === email && el.number === number.split('-').join('')
     }
     return el.email === email
   })
