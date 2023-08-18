@@ -22,6 +22,7 @@ const App = () => {
           toast.success('Что-то нашли!')
         } else {
           toast.info('Увы, ничего не нашли!')
+          setData(res)
           setParams({ email: '', number: '' })
         }
 
@@ -70,7 +71,7 @@ const App = () => {
             type="email"
             value={params.email}
             onChange={(e) => handleChangeEmail({ email: e.target.value })}
-            placeholder="email"
+            placeholder="email*"
             required
           />
 
