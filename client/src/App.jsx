@@ -54,7 +54,7 @@ const App = () => {
     } else {
       res = {
         ...params,
-        ...{ number: newVal.slice(0, newVal.length) },
+        ...{ number: newVal.slice(0, newVal.length - 1) },
       }
     }
     return setParams(res)
